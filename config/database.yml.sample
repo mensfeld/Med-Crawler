@@ -1,0 +1,11 @@
+adapter: mysql2
+encoding: utf8
+reconnect: true
+pool: 100
+username: username
+password: password
+host: localhost
+collation: utf8_general_ci
+timeout: 5000
+socket: /var/run/mysqld/mysqld.sock
+database: olap
