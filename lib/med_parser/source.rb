@@ -51,7 +51,11 @@ module MedParser
 
     def load(url)
       MedParser.logger.debug { "Loading url #{url}" }
-      @current_page = Nokogiri::HTML(open(url))
+      begin
+        @current_page = Nokogiri::HTML(open(url))
+      rescue
+        retry
+      end
     end
 
   end
